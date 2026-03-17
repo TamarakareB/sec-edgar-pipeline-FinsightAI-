@@ -15,6 +15,9 @@ data/raw/
 data/dataset/
 data/index/
 
+# SQL database
+data/sql/*.db
+
 # OS / IDE
 .DS_Store
 .vscode/

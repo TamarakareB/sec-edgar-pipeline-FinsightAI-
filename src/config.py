@@ -10,7 +10,7 @@ class Settings:
 
     # SEC requires a descriptive User-Agent with contact information
     # Replace the email below with your own email address
-    user_agent: str = "BANA275-NLP-StudentProject/1.0 (contact: Your email here)"
+    user_agent: str = "Gema Zhu MSBA UCI BANA275 Project (contact: gemaz1@uci.edu)"
 
    
     # Conservative rate limit: 0.2s ≈ 5 requests/sec
