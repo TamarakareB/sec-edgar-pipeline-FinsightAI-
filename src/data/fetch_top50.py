@@ -1,52 +1,39 @@
-import time
-import sys
 import pandas as pd
-import subprocess
 
-CSV_PATH = "data/top_sp500.csv"
-PYTHON = sys.executable
+INP = "data/top_sp500.csv"
+OUT = "data/top50_sp500.csv"
 
+df = pd.read_csv(INP)
 
-def main():
-    # FORCE all columns to string so cik/company never become int
-    df = pd.read_csv(CSV_PATH, dtype=str).fillna("")
-    df.columns = [c.strip() for c in df.columns]
+# 1) Clean column names
+df.columns = [c.strip() for c in df.columns]
 
-    # Quick sanity check
-    print("✅ Columns:", df.columns.tolist())
-    if len(df) > 0:
-        print("✅ First row:", df.iloc[0].to_dict())
+# 2) Drop unnamed/empty columns (e.g., "Unnamed: 3")
+df = df.loc[:, ~df.columns.str.contains(r"^Unnamed", case=False)]
 
-    for i, row in df.iterrows():
-        ticker = str(row["ticker"]).strip().upper()
-        company = str(row["company_name"]).strip()
-        cik = str(row["cik"]).strip().replace(".0", "").zfill(10)
+# 3) Fix weird company column name variations
+if "company _name" in df.columns:
+    df = df.rename(columns={"company _name": "company_name"})
+elif "company_name" not in df.columns and "company-name" in df.columns:
+    df = df.rename(columns={"company-name": "company_name"})
+elif "company_name" not in df.columns:
+    raise ValueError(f"Could not find company column. Columns: {df.columns.tolist()}")
 
-        if not ticker or not cik:
-            print(f"⚠️ Skipping row {i+1} (missing ticker/cik)")
-            continue
+# 4) Normalize values
+df["ticker"] = df["ticker"].astype(str).str.strip().str.upper()
+df["company_name"] = df["company_name"].astype(str).str.strip()
 
-        print(f"\n[{i+1}/{len(df)}] Fetching {ticker} | {company} | CIK={cik}")
+# CIK: convert to string, remove .0 if present, pad to 10 digits
+df["cik"] = (
+    df["cik"]
+    .astype(str)
+    .str.replace(r"\.0$", "", regex=True)
+    .str.strip()
+    .str.zfill(10)
+)
 
-        result = subprocess.run([
-            PYTHON,
-            "-m",
-            "src.data.sec_edgar_pipeline",
-            "fetch",
-            "--cik", cik,
-            "--ticker", ticker,
-            "--company", company,
-            "--forms", "10-K",
-            "--max-filings", "5"
-        ])
+# 5) Keep only required columns
+df = df[["ticker", "company_name", "cik"]]
 
-        if result.returncode != 0:
-            print(f"⚠️ Fetch failed for {ticker}. Continuing...")
-
-        time.sleep(0.5)
-
-    print("\n✅ Finished fetching all companies.")
-
-
-if __name__ == "__main__":
-    main()
+df.to_csv(OUT, index=False)
+print(f"✅ Cleaned CSV saved to {OUT} with {len(df)} rows")

@@ -45,7 +45,14 @@ def get_section_text(chunk):
 def match_signals(chunk, test):
     ticker_match = normalize_text(chunk.get("ticker")) == normalize_text(test.get("ticker"))
     year_match = extract_year(chunk) == str(test.get("year"))
-    section_match = normalize_text(test.get("expected_section")) in get_section_text(chunk)
+
+    expected_sections = test.get("expected_sections", [])
+    section_text = get_section_text(chunk)
+
+    section_match = any(
+        normalize_text(sec) in section_text
+        for sec in expected_sections
+    ) if expected_sections else False
 
     return {
         "ticker_match": ticker_match,
@@ -86,18 +93,19 @@ def section_hit(results, test, k=5):
 
 def summarize_top_results(results, test, k=5):
     summary = []
-    for chunk in results[:k]:
+    for idx, chunk in enumerate(results[:k], start=1):
         m = match_signals(chunk, test)
         summary.append({
+            "rank": idx,
             "chunk_id": chunk.get("chunk_id"),
             "ticker": chunk.get("ticker"),
             "year": extract_year(chunk),
-            "section": chunk.get("section_hint", chunk.get("section", "")),
-            "rank": chunk.get("rank"),
+            "section": chunk.get("section_hint") or chunk.get("section") or chunk.get("section_name") or "",
             "distance": chunk.get("distance"),
             "ticker_match": m["ticker_match"],
             "year_match": m["year_match"],
             "section_match": m["section_match"],
+            "text_preview": str(chunk.get("text", ""))[:200]
         })
     return summary
 
@@ -120,7 +128,6 @@ def run_retrieval_evaluation(k=5):
     for test in tests:
         print(f"\n[{test['id']}] {test['question']}")
 
-        # use filtering only if your metadata supports it
         retrieved = search(
             query=test["question"],
             top_k=k,
@@ -145,7 +152,8 @@ def run_retrieval_evaluation(k=5):
             "question": test["question"],
             "ticker": test.get("ticker"),
             "year": test.get("year"),
-            "expected_section": test.get("expected_section"),
+            "task": test.get("task"),
+            "expected_sections": test.get("expected_sections", []),
             "strict_recall_at_k": strict_r,
             "soft_recall_at_k": soft_r,
             "strict_rr": round(strict_mrr, 3),

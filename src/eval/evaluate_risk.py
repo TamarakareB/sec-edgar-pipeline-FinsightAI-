@@ -5,7 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from rag.retrieve import search
-from src.qa.risk_classifier import classify_risk
+from src.risk_classifier import classify_risk
 
 OUT_DIR = Path("data/eval/results")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
