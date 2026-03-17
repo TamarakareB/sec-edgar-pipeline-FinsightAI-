@@ -9,11 +9,11 @@ import google.generativeai as genai
 
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-judge_model = genai.GenerativeModel("gemini-1.5-flash")
+judge_model = genai.GenerativeModel("gemini-2.5-flash")
 
 # project root imports
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from src.qa.qa_pipeline import ask
+from src.qa_pipeline import ask
 
 DB_PATH = Path("data/sql/finsightai.db")
 OUT_DIR = Path("data/eval/results")

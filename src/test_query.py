@@ -1,4 +1,4 @@
-from retrieve import search
+from src.rag.retrieve import search
 
 query = "What risks does Apple mention about supply chain?"
 

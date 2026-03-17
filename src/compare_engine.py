@@ -5,7 +5,7 @@ import google.generativeai as genai
 
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-model = genai.GenerativeModel("gemini-1.5-flash")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 sys.path.insert(0, str(Path(__file__).parent / "rag"))
 from retrieve import search
