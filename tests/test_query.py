@@ -1,5 +1,5 @@
-from src.rag.qa_gemini import answer_question
-from src.rag.risk_classifier import classify_risk
+from src.qa.qa_gemini import answer_question
+from src.qa.risk_classifier import classify_risk
 
 chunks = [
     {

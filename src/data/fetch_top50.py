@@ -1,8 +1,11 @@
 import time
+import sys
 import pandas as pd
 import subprocess
 
-CSV_PATH = "data/top_sp500.csv"   # <-- keep this
+CSV_PATH = "data/top_sp500.csv"
+PYTHON = sys.executable
+
 
 def main():
     # FORCE all columns to string so cik/company never become int
@@ -11,7 +14,8 @@ def main():
 
     # Quick sanity check
     print("✅ Columns:", df.columns.tolist())
-    print("✅ First row:", df.iloc[0].to_dict())
+    if len(df) > 0:
+        print("✅ First row:", df.iloc[0].to_dict())
 
     for i, row in df.iterrows():
         ticker = str(row["ticker"]).strip().upper()
@@ -22,11 +26,12 @@ def main():
             print(f"⚠️ Skipping row {i+1} (missing ticker/cik)")
             continue
 
-        # f-string is safest (no string + int concat)
         print(f"\n[{i+1}/{len(df)}] Fetching {ticker} | {company} | CIK={cik}")
 
         result = subprocess.run([
-            "python", "-m", "src.sec_edgar_pipeline",
+            PYTHON,
+            "-m",
+            "src.data.sec_edgar_pipeline",
             "fetch",
             "--cik", cik,
             "--ticker", ticker,
@@ -40,7 +45,8 @@ def main():
 
         time.sleep(0.5)
 
-    print(f"\n[{i+1}/{len(df)}] Fetching {str(ticker)} | {str(company)} | CIK={str(cik)}")
+    print("\n✅ Finished fetching all companies.")
+
 
 if __name__ == "__main__":
     main()

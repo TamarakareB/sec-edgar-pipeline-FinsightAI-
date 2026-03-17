@@ -18,3 +18,12 @@ data/index/
 # OS / IDE
 .DS_Store
 .vscode/
+
+# NLP models and caches
+.cache/
+models/
+*.ckpt
+*.pt
+*.bin
+
+contact.py

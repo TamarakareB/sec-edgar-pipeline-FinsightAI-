@@ -1,0 +1,202 @@
+[
+  {
+    "id": "Q1",
+    "question": "What are Apple's main liquidity risks?",
+    "ticker": "AAPL",
+    "year": 2023,
+    "category": "risk_analysis",
+    "keywords": ["cash", "liquidity", "debt", "obligations", "capital"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Financial/Liquidity"]
+  },
+  {
+    "id": "Q2",
+    "question": "What does Apple say about research and development spending?",
+    "ticker": "AAPL",
+    "year": 2022,
+    "category": "financial_metrics",
+    "keywords": ["research", "development", "spending", "innovation", "expenses"],
+    "expected_section": "Management’s Discussion and Analysis",
+    "expected_labels": ["Strategy"]
+  },
+  {
+    "id": "Q3",
+    "question": "What was Microsoft's total revenue in 2023?",
+    "ticker": "MSFT",
+    "year": 2023,
+    "category": "financial_metrics",
+    "keywords": ["revenue", "sales", "billion", "2023"],
+    "expected_section": "Management’s Discussion and Analysis",
+    "expected_labels": ["Strategy"]
+  },
+  {
+    "id": "Q4",
+    "question": "What competitive risks does Microsoft mention?",
+    "ticker": "MSFT",
+    "year": 2023,
+    "category": "risk_analysis",
+    "keywords": ["competition", "competitive", "market share", "industry", "rivals"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Competition"]
+  },
+  {
+    "id": "Q5",
+    "question": "What supply chain risks does Tesla mention?",
+    "ticker": "TSLA",
+    "year": 2023,
+    "category": "risk_analysis",
+    "keywords": ["supply", "supplier", "component", "manufacturing", "shortage"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Operational"]
+  },
+  {
+    "id": "Q6",
+    "question": "What market risks does Tesla face?",
+    "ticker": "TSLA",
+    "year": 2022,
+    "category": "risk_analysis",
+    "keywords": ["market", "demand", "pricing", "volatility", "economic"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Market/Macro"]
+  },
+  {
+    "id": "Q7",
+    "question": "How much did Amazon spend on capital expenditures?",
+    "ticker": "AMZN",
+    "year": 2022,
+    "category": "financial_metrics",
+    "keywords": ["capital", "expenditures", "investment", "property", "equipment"],
+    "expected_section": "Management’s Discussion and Analysis",
+    "expected_labels": ["Strategy"]
+  },
+  {
+    "id": "Q8",
+    "question": "What operational risks does Amazon identify?",
+    "ticker": "AMZN",
+    "year": 2023,
+    "category": "risk_analysis",
+    "keywords": ["operations", "fulfillment", "logistics", "labor", "disruption"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Operational"]
+  },
+  {
+    "id": "Q9",
+    "question": "What regulatory risks does JPMorgan Chase face?",
+    "ticker": "JPM",
+    "year": 2022,
+    "category": "risk_analysis",
+    "keywords": ["regulatory", "compliance", "capital", "federal", "regulation"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Regulatory/Legal"]
+  },
+  {
+    "id": "Q10",
+    "question": "What does JPMorgan say about credit risk?",
+    "ticker": "JPM",
+    "year": 2023,
+    "category": "risk_analysis",
+    "keywords": ["credit", "borrowers", "losses", "loans", "default"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Financial/Liquidity"]
+  },
+  {
+    "id": "Q11",
+    "question": "What are NVIDIA's main market risks?",
+    "ticker": "NVDA",
+    "year": 2023,
+    "category": "risk_analysis",
+    "keywords": ["market", "demand", "semiconductor", "competition", "volatility"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Market/Macro"]
+  },
+  {
+    "id": "Q12",
+    "question": "What risks does NVIDIA mention related to competition?",
+    "ticker": "NVDA",
+    "year": 2023,
+    "category": "risk_analysis",
+    "keywords": ["competition", "competitive", "industry", "pricing", "innovation"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Competition"]
+  },
+  {
+    "id": "Q13",
+    "question": "What operational risks does Walmart identify?",
+    "ticker": "WMT",
+    "year": 2023,
+    "category": "risk_analysis",
+    "keywords": ["operations", "store", "labor", "distribution", "supply chain"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Operational"]
+  },
+  {
+    "id": "Q14",
+    "question": "What technology or cybersecurity risks does Walmart mention?",
+    "ticker": "WMT",
+    "year": 2023,
+    "category": "risk_analysis",
+    "keywords": ["technology", "cybersecurity", "data", "systems", "security"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Cyber/Technology"]
+  },
+  {
+    "id": "Q15",
+    "question": "What regulatory risks does Meta mention?",
+    "ticker": "META",
+    "year": 2023,
+    "category": "risk_analysis",
+    "keywords": ["regulation", "privacy", "legal", "government", "compliance"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Regulatory/Legal"]
+  },
+  {
+    "id": "Q16",
+    "question": "What reputation or ESG-related risks does Meta mention?",
+    "ticker": "META",
+    "year": 2022,
+    "category": "risk_analysis",
+    "keywords": ["reputation", "trust", "social", "content", "public"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Reputation/ESG"]
+  },
+  {
+    "id": "Q17",
+    "question": "What liquidity or capital risks does Bank of America discuss?",
+    "ticker": "BAC",
+    "year": 2023,
+    "category": "risk_analysis",
+    "keywords": ["liquidity", "capital", "funding", "debt", "obligations"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Financial/Liquidity"]
+  },
+  {
+    "id": "Q18",
+    "question": "What legal or compliance risks does Bank of America mention?",
+    "ticker": "BAC",
+    "year": 2022,
+    "category": "risk_analysis",
+    "keywords": ["legal", "compliance", "litigation", "regulatory", "law"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Regulatory/Legal"]
+  },
+  {
+    "id": "Q19",
+    "question": "What operational risks does Alphabet mention?",
+    "ticker": "GOOGL",
+    "year": 2023,
+    "category": "risk_analysis",
+    "keywords": ["operations", "infrastructure", "services", "disruption", "employees"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Operational"]
+  },
+  {
+    "id": "Q20",
+    "question": "What competition risks does Alphabet discuss?",
+    "ticker": "GOOGL",
+    "year": 2023,
+    "category": "risk_analysis",
+    "keywords": ["competition", "competitive", "advertising", "search", "market"],
+    "expected_section": "Risk Factors",
+    "expected_labels": ["Competition"]
+  }
+]

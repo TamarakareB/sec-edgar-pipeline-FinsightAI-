@@ -10,7 +10,7 @@ model = genai.GenerativeModel("gemini-1.5-flash")   # Fast + cheap. Change to ge
 
 sys.path.insert(0, str(Path(__file__).parent / "rag"))
 from retrieve import search
-from section_detector import get_priority_sections, get_section_label
+from src.rag.section_detector import get_priority_sections, get_section_label
 
 SYSTEM_PROMPT = """You are FinSightAI, a precise financial document analyst.
 
