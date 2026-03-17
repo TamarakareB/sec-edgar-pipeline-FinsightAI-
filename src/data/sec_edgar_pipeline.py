@@ -1,4 +1,8 @@
 # src/sec_edgar_pipeline.py
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 import argparse
 import json
@@ -132,6 +136,9 @@ def download_bytes(url: str, out_path: Path) -> bytes:
     out_path.write_bytes(r.content)
     return r.content
 
+print(f"[fetch] Using User-Agent: {settings.user_agent}")
+print(f"[fetch] Raw dir: {settings.raw_dir}")
+print(f"[fetch] Dataset dir: {settings.dataset_dir}")
 
 # -----------------------
 # Stage 1: fetch (download only)

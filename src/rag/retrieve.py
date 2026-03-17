@@ -3,17 +3,28 @@ import pickle
 from pathlib import Path
 from sentence_transformers import SentenceTransformer
 
-INDEX_DIR = Path("data/index")
+# anchor to project root
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+INDEX_DIR = PROJECT_ROOT / "data" / "index"
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
-index = faiss.read_index(str(INDEX_DIR / "faiss_index.bin"))
 
-with open(INDEX_DIR / "metadata.pkl", "rb") as f:
+index_path = INDEX_DIR / "faiss_index.bin"
+metadata_path = INDEX_DIR / "metadata.pkl"
+
+if not index_path.exists():
+    raise FileNotFoundError(f"FAISS index not found: {index_path}")
+
+if not metadata_path.exists():
+    raise FileNotFoundError(f"Metadata file not found: {metadata_path}")
+
+index = faiss.read_index(str(index_path))
+
+with open(metadata_path, "rb") as f:
     metadata = pickle.load(f)
 
 
 def _extract_year(record):
-    # try common field names
     for key in ["year", "filing_year"]:
         if key in record and record[key] is not None:
             return str(record[key])
@@ -27,7 +38,7 @@ def _extract_year(record):
 
 def search(query, top_k=5, ticker=None, year=None):
     q_embedding = model.encode([query])
-    distances, indices = index.search(q_embedding, top_k * 5)  # over-retrieve for filtering
+    distances, indices = index.search(q_embedding, top_k * 5)
 
     results = []
 
@@ -35,11 +46,10 @@ def search(query, top_k=5, ticker=None, year=None):
         if idx < 0:
             continue
 
-        item = dict(metadata[idx])  # copy
+        item = dict(metadata[idx])
         item["rank"] = rank
         item["distance"] = float(dist)
 
-        # optional filtering
         if ticker is not None:
             item_ticker = str(item.get("ticker", "")).upper()
             if item_ticker != str(ticker).upper():

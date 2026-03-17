@@ -9,7 +9,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 model = genai.GenerativeModel("gemini-1.5-flash")   # Fast + cheap. Change to gemini-1.5-pro for higher quality.
 
 sys.path.insert(0, str(Path(__file__).parent / "rag"))
-from retrieve import search
+from src.rag.retrieve import search
 from src.rag.section_detector import get_priority_sections, get_section_label
 
 SYSTEM_PROMPT = """You are FinSightAI, a precise financial document analyst.

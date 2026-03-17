@@ -20,7 +20,11 @@ RISK_LABELS = [
 
 
 def classify_risk(query, chunks):
-
+    if not chunks:
+        return {
+            "risk_labels": [],
+            "warning": "No chunks provided to risk classifier."
+        }
     api_key = os.getenv("GEMINI_API_KEY")
 
     client = genai.Client(api_key=api_key)
@@ -76,6 +80,7 @@ Return JSON:
         return {"risk_labels": labels[:3]}
 
     except:
+        fallback_chunk_id = chunks[0]["chunk_id"] if chunks else None
         return {
             "risk_labels": [
                 {
