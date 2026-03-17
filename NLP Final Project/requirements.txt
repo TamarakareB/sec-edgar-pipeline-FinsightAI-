@@ -1,0 +1,9 @@
+requests
+tqdm
+beautifulsoup4
+lxml
+pandas
+pyarrow
+tenacity
+python-dotenv
+google-genai
