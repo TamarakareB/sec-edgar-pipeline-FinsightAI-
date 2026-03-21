@@ -1,58 +1,154 @@
-# EDGAR NLP Pipeline (BANA 275)
+# FinSightAI: SEC EDGAR NLP Pipeline (BANA 275)
 
-This repo downloads SEC EDGAR filings (e.g., 10-K/10-Q/8-K), converts them into clean text, and builds a structured dataset for downstream NLP tasks (topic modeling, embeddings/RAG, classification, etc.).
+This project builds an end-to-end AI-powered pipeline to automatically extract, analyze, and query financial insights from SEC EDGAR filings (e.g., 10-K, 10-Q).
+
+It downloads filings, converts them into clean text, extracts structured financial data, and supports downstream NLP tasks such as:
+- financial metric extraction
+- retrieval-augmented generation (RAG)
+- question answering
+- risk classification
+- SQL-based financial analysis
+
+---
+
+## Project Motivation
+
+SEC filings are a key source of financial information, but they present major challenges:
+
+- filings often exceed **100+ pages**
+- important insights are buried in **unstructured text**
+- analysts spend hours manually reading documents
+- professional tools can cost **$10K+ per year**
+
+In our project:
+- we processed **250+ filings**
+- each filing averages **~120 pages**
+- key risks appear across **15+ sections**
+
+Our goal is to reduce hours of manual analysis into seconds of automated insights.
+
+---
+
+## Key Features
+
+### Data Pipeline 📥
+- Download SEC EDGAR filings
+- Convert HTML filings into clean text
+- Build structured datasets (JSONL / Parquet)
+
+### Financial Extraction 📊
+- We extract key financial metrics:
+  - total revenue
+  - net income
+  - total assets
+  - total liabilities
+  - cash & equivalents
+
+### RAG + QA 🤖
+- Chunk and embed filings
+- Retrieve relevant sections
+- Generate answers with citations
+
+### Risk Classification ⚠️
+- Label risks:
+  - regulatory
+  - operational
+  - financial
+
+### SQL Database 🗄️
+- Store structured financial metrics
+- Run analytical queries
+
+---
 
 ## Project Structure
 
+```bash
 edgar-nlp-pipeline/
-data/
-raw/ # downloaded raw HTML/TXT (ignored by git)
-dataset/ # output datasets JSONL/Parquet (ignored by git)
-docs/
-DATA_SCHEMA.md
-src/
-config.py
-sec_edgar_pipeline.py
-tests/
-requirements.txt
-.gitignore
-README.md
+│
+├── data/
+│   ├── raw/                 # downloaded raw filings (ignored by git)
+│   ├── dataset/             # processed datasets (ignored by git)
+│   │   ├── edgar_docs.jsonl
+│   │   ├── edgar_docs.parquet
+│   │   ├── edgar_meta.json
+│   │   └── financial_metrics.jsonl
+│   │
+│   ├── eval/
+│   │   ├── evaluation_queries.json
+│   │   └── results/
+│   │
+│   ├── sql/
+│   │   └── finsightai.db
+│   │
+│   └── top50_sp500.csv
+│
+├── docs/
+│   ├── DATA_SCHEMA.md
+│   └── ragworkflow.md
+│
+├── src/
+│   ├── data/
+│   │   ├── fetch_top50.py
+│   │   ├── clean_top50_csv.py
+│   │   └── sec_edgar_pipeline.py
+│   │
+│   ├── rag/
+│   │   ├── build_index.py
+│   │   ├── embed_chunks.py
+│   │   ├── retrieve.py
+│   │   └── section_detector.py
+│   │
+│   ├── eval/
+│   │   ├── evaluate_qa.py
+│   │   ├── evaluate_retrieval.py
+│   │   ├── evaluate_risk.py
+│   │   └── run_evaluation.py
+│   │
+│   ├── financial_extractor.py
+│   ├── sql_database.py
+│   ├── qa_pipeline.py
+│   ├── qa_gemini.py
+│   ├── risk_classifier.py
+│   ├── run_data_pipeline.py
+│   ├── run_rag_pipeline.py
+│   ├── test_query.py
+│   └── trend_analyzer.py
+│
+├── tests/
+├── requirements.txt
+├── .gitignore
+└── README.md
 
-## Setup (VSCode)
-1. Create and activate venv:
-   - Windows PowerShell:
-     ```powershell
-     python -m venv .venv
-     .\.venv\Scripts\Activate.ps1
-     python -m pip install --upgrade pip
-     ```
-   - macOS/Linux:
-     ```bash
-     python3 -m venv .venv
-     source .venv/bin/activate
-     python -m pip install --upgrade pip
-     ```
+```
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
 
-3. Run:
-    ```bash
-    pip install -r requirements.txt
+## 🛠️ Setup
 
-## Notes on SEC Access
+1. Create virtual environment
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
 
-Requests must include a descriptive User-Agent with contact information.
+2. Install dependencies
+```bash
+pip install -r requirements.txt
+```
 
-Use rate limiting to avoid overloading SEC servers.
+## ▶️ Run the Pipeline
 
-## Output
+### Run data pipeline:
+```bash
+python src/run_data_pipeline.py
+```
 
-data/raw/: raw downloaded filings (HTML/TXT)
+### Run RAG pipeline:
+```bash
+python src/run_rag_pipeline.py
+```
 
-data/dataset/: dataset files (JSONL/Parquet)
-
-## Dataset Schema
-
-See docs/DATA_SCHEMA.md.
+### Test query:
+```bash
+python -m src.test_query
+```
