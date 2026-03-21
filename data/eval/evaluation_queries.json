@@ -56,6 +56,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "competitive_risk",
+      "regulatory_risk",
+      "operational_risk"
     ]
   },
   {
@@ -115,6 +120,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "competitive_risk",
+      "regulatory_risk",
+      "operational_risk"
     ]
   },
   {
@@ -174,6 +184,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "competitive_risk",
+      "operational_risk",
+      "regulatory_risk"
     ]
   },
   {
@@ -233,6 +248,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "competitive_risk",
+      "operational_risk",
+      "regulatory_risk"
     ]
   },
   {
@@ -292,6 +312,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "competitive_risk",
+      "cybersecurity_risk",
+      "operational_risk"
     ]
   },
   {
@@ -351,6 +376,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "competitive_risk",
+      "cybersecurity_risk",
+      "operational_risk"
     ]
   },
   {
@@ -410,6 +440,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "market_risk",
+      "regulatory_risk",
+      "operational_risk"
     ]
   },
   {
@@ -469,6 +504,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "market_risk",
+      "regulatory_risk",
+      "operational_risk"
     ]
   },
   {
@@ -528,6 +568,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "regulatory_risk",
+      "operational_risk",
+      "competitive_risk"
     ]
   },
   {
@@ -587,6 +632,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "regulatory_risk",
+      "operational_risk",
+      "competitive_risk"
     ]
   },
   {
@@ -646,6 +696,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "regulatory_risk",
+      "competitive_risk",
+      "cybersecurity_risk"
     ]
   },
   {
@@ -705,6 +760,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "regulatory_risk",
+      "competitive_risk",
+      "cybersecurity_risk"
     ]
   },
   {
@@ -764,6 +824,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "competitive_risk",
+      "market_risk",
+      "operational_risk"
     ]
   },
   {
@@ -823,6 +888,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "competitive_risk",
+      "market_risk",
+      "operational_risk"
     ]
   },
   {
@@ -882,6 +952,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "supply_chain_risk",
+      "competitive_risk",
+      "market_risk"
     ]
   },
   {
@@ -941,6 +1016,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "supply_chain_risk",
+      "competitive_risk",
+      "market_risk"
     ]
   },
   {
@@ -1000,6 +1080,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "competitive_risk",
+      "cybersecurity_risk",
+      "operational_risk"
     ]
   },
   {
@@ -1059,6 +1144,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "competitive_risk",
+      "cybersecurity_risk",
+      "operational_risk"
     ]
   },
   {
@@ -1118,6 +1208,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "operational_risk",
+      "supply_chain_risk",
+      "competitive_risk"
     ]
   },
   {
@@ -1177,6 +1272,11 @@
       "regulation",
       "operations",
       "market"
+    ],
+    "expected_labels": [
+      "operational_risk",
+      "supply_chain_risk",
+      "competitive_risk"
     ]
   }
 ]

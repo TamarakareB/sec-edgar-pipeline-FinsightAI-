@@ -1,0 +1,967 @@
+{
+  "run_date": "2026-03-17T04:35:35.421958",
+  "evaluation_type": "risk_classification",
+  "k": 5,
+  "summary": {
+    "num_tests": 20,
+    "avg_precision": 0.125,
+    "avg_recall": 0.116,
+    "avg_f1": 0.12,
+    "overlap_hit_rate": 0.3,
+    "strict_accuracy": 0.05
+  },
+  "results": [
+    {
+      "id": "q003",
+      "question": "What were the main risk factors reported by Apple in 2022?",
+      "ticker": "AAPL",
+      "year": 2022,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "competitive_risk",
+        "regulatory_risk",
+        "operational_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "operational_risk",
+        "regulatory_risk"
+      ],
+      "predicted_labels_raw": [
+        "Operational",
+        "Regulatory/Legal",
+        "Competition"
+      ],
+      "predicted_labels_normalized": [
+        "competitive_risk",
+        "operational_risk",
+        "regulatory/legal"
+      ],
+      "precision": 0.67,
+      "recall": 0.67,
+      "f1": 0.67,
+      "overlap_hit": 1,
+      "strict_correct": 1,
+      "num_retrieved": 5,
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": "0000320193-22-000108_c000045",
+          "ticker": "AAPL",
+          "year": 2022,
+          "filing_date": "2022-10-28",
+          "section": "",
+          "distance": 0.6445344686508179,
+          "text_preview": "facturing and logistical service providers have experienced disruptions, resulting in supply shortages that affected sales worldwide, and similar disruptions could occur in the future. Public safety measures can also adversely impact consumer demand "
+        },
+        {
+          "rank": 2,
+          "chunk_id": "0000320193-22-000108_c000119",
+          "ticker": "AAPL",
+          "year": 2022,
+          "filing_date": "2022-10-28",
+          "section": "",
+          "distance": 0.7104393243789673,
+          "text_preview": "19\nThe COVID-19 pandemic has had, and continues to have, a significant impact around the world, prompting governments and businesses to take unprecedented measures, such as restrictions on travel and business operations, temporary closures of busines"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0000320193-22-000108_c000030",
+          "ticker": "AAPL",
+          "year": 2022,
+          "filing_date": "2022-10-28",
+          "section": "",
+          "distance": 0.7321308851242065,
+          "text_preview": "rily through aggressive pricing and very low cost structures, and by imitating the Company’s products and infringing on its intellectual property.\nThe Company’s ability to compete successfully depends heavily on ensuring the continuing and timely int"
+        }
+      ]
+    },
+    {
+      "id": "q006",
+      "question": "What were the main risk factors reported by Apple in 2023?",
+      "ticker": "AAPL",
+      "year": 2023,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "competitive_risk",
+        "regulatory_risk",
+        "operational_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "operational_risk",
+        "regulatory_risk"
+      ],
+      "predicted_labels_raw": [
+        "Financial/Liquidity",
+        "Market/Macro",
+        "Regulatory/Legal"
+      ],
+      "predicted_labels_normalized": [
+        "financial/liquidity",
+        "market/macro",
+        "regulatory/legal"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "overlap_hit": 0,
+      "strict_correct": 0,
+      "num_retrieved": 4,
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": "0000320193-23-000106_c000102",
+          "ticker": "AAPL",
+          "year": 2023,
+          "filing_date": "2023-11-03",
+          "section": "",
+          "distance": 0.693550705909729,
+          "text_preview": "ected by changes in liquidity, credit deterioration, financial results, market and economic conditions, political risk, sovereign risk, interest rate fluctuations or other factors. As a result, the value and liquidity of the Company’s cash, cash equi"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "0000320193-23-000106_c000097",
+          "ticker": "AAPL",
+          "year": 2023,
+          "filing_date": "2023-11-03",
+          "section": "",
+          "distance": 0.7207521200180054,
+          "text_preview": "so incur significant fees or fines if the Company fails to follow payment card industry data security standards. The Company could also experience a significant increase in payment card transaction costs or lose the ability to process payment cards i"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0000320193-23-000106_c000121",
+          "ticker": "AAPL",
+          "year": 2023,
+          "filing_date": "2023-11-03",
+          "section": "",
+          "distance": 0.7639377117156982,
+          "text_preview": "n during 2023 compared to 2022 due primarily to lower net sales of iPad mini and iPad Air, partially offset by the combined net sales of iPad 9th and 10th generation.\nWearables, Home and Accessories\nWearables, Home and Accessories net sales decreased"
+        }
+      ]
+    },
+    {
+      "id": "q009",
+      "question": "What were the main risk factors reported by Amazon in 2022?",
+      "ticker": "AMZN",
+      "year": 2022,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "competitive_risk",
+        "operational_risk",
+        "regulatory_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "operational_risk",
+        "regulatory_risk"
+      ],
+      "predicted_labels_raw": [
+        "Market/Macro",
+        "Market/Macro",
+        "Regulatory/Legal"
+      ],
+      "predicted_labels_normalized": [
+        "market/macro",
+        "regulatory/legal"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "overlap_hit": 0,
+      "strict_correct": 0,
+      "num_retrieved": 5,
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": "0001018724-22-000005_c000146",
+          "ticker": "AMZN",
+          "year": 2022,
+          "filing_date": "2022-02-04",
+          "section": "",
+          "distance": 0.6108647584915161,
+          "text_preview": "ry 3, 2022, in our earnings release furnished on Form 8-K as set forth below. These forward-looking statements reflect Amazon.com’s expectations as of February 3, 2022, and are subject to substantial uncertainty. Our results are inherently unpredicta"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "0001018724-22-000005_c000099",
+          "ticker": "AMZN",
+          "year": 2022,
+          "filing_date": "2022-02-04",
+          "section": "",
+          "distance": 0.6165852546691895,
+          "text_preview": "ts, the rate of growth of the Internet, online commerce, and cloud services, the amount that Amazon.com invests in new business opportunities and the timing of those investments, the mix of products and services sold to customers, the mix of net sale"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0001018724-22-000005_c000030",
+          "ticker": "AMZN",
+          "year": 2022,
+          "filing_date": "2022-02-04",
+          "section": "",
+          "distance": 0.8459428548812866,
+          "text_preview": "nformation\n70\nItem 9C.\nDisclosure Regarding Foreign Jurisdictions that Prevent Inspections\n70\nPART III\nItem 10.\nDirectors, Executive Officers, and Corporate Governance\n70\nItem 11.\nExecutive Compensation\n70\nItem 12.\nSecurity Ownership of Certain Benef"
+        }
+      ]
+    },
+    {
+      "id": "q012",
+      "question": "What were the main risk factors reported by Amazon in 2023?",
+      "ticker": "AMZN",
+      "year": 2023,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "competitive_risk",
+        "operational_risk",
+        "regulatory_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "operational_risk",
+        "regulatory_risk"
+      ],
+      "predicted_labels_raw": [
+        "Market/Macro",
+        "Operational"
+      ],
+      "predicted_labels_normalized": [
+        "market/macro",
+        "operational_risk"
+      ],
+      "precision": 0.5,
+      "recall": 0.33,
+      "f1": 0.4,
+      "overlap_hit": 1,
+      "strict_correct": 0,
+      "num_retrieved": 2,
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": "0001018724-23-000004_c000151",
+          "ticker": "AMZN",
+          "year": 2023,
+          "filing_date": "2023-02-03",
+          "section": "",
+          "distance": 0.7212569713592529,
+          "text_preview": "e\n24,879\n(151)\n24,728\n12,248\n(861)\n11,387\n___________________\n(1)\nRepresents the change in reported amounts resulting from changes in foreign exchange rates from those in effect in the comparable prior year period for operating results.\n(2)\nRepresent"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "0001018724-23-000004_c000279",
+          "ticker": "AMZN",
+          "year": 2023,
+          "filing_date": "2023-02-03",
+          "section": "",
+          "distance": 0.8829954862594604,
+          "text_preview": "te, assurance that its objectives will be met. Further, no evaluation of controls can provide absolute assurance that misstatements due to error or fraud will not occur or that all control issues and instances of fraud, if any, within the Company hav"
+        }
+      ]
+    },
+    {
+      "id": "q015",
+      "question": "What were the main risk factors reported by Cisco in 2022?",
+      "ticker": "CSCO",
+      "year": 2022,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "competitive_risk",
+        "cybersecurity_risk",
+        "operational_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "cybersecurity_risk",
+        "operational_risk"
+      ],
+      "predicted_labels_raw": [],
+      "predicted_labels_normalized": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "overlap_hit": 0,
+      "strict_correct": 0,
+      "num_retrieved": 0,
+      "top_results": []
+    },
+    {
+      "id": "q018",
+      "question": "What were the main risk factors reported by Cisco in 2023?",
+      "ticker": "CSCO",
+      "year": 2023,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "competitive_risk",
+        "cybersecurity_risk",
+        "operational_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "cybersecurity_risk",
+        "operational_risk"
+      ],
+      "predicted_labels_raw": [
+        "Strategy"
+      ],
+      "predicted_labels_normalized": [
+        "strategy"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "overlap_hit": 0,
+      "strict_correct": 0,
+      "num_retrieved": 1,
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": "0000858877-23-000023_c000050",
+          "ticker": "CSCO",
+          "year": 2023,
+          "filing_date": "2023-09-07",
+          "section": "",
+          "distance": 0.9127499461174011,
+          "text_preview": "s are intended to identify such forward-looking statements. In addition, any statements that refer to projections of our future financial performance, our anticipated growth and trends in our businesses, and other characterizations of future events o"
+        }
+      ]
+    },
+    {
+      "id": "q021",
+      "question": "What were the main risk factors reported by Chevron in 2022?",
+      "ticker": "CVX",
+      "year": 2022,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "market_risk",
+        "regulatory_risk",
+        "operational_risk"
+      ],
+      "expected_labels_normalized": [
+        "market_risk",
+        "operational_risk",
+        "regulatory_risk"
+      ],
+      "predicted_labels_raw": [
+        "Market/Macro",
+        "Regulatory/Legal",
+        "Operational"
+      ],
+      "predicted_labels_normalized": [
+        "market/macro",
+        "operational_risk",
+        "regulatory/legal"
+      ],
+      "precision": 0.33,
+      "recall": 0.33,
+      "f1": 0.33,
+      "overlap_hit": 1,
+      "strict_correct": 0,
+      "num_retrieved": 5,
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": "0000093410-22-000019_c000168",
+          "ticker": "CVX",
+          "year": 2022,
+          "filing_date": "2022-02-24",
+          "section": "",
+          "distance": 0.49070727825164795,
+          "text_preview": " of the world.\nThe company is committed to lowering the carbon intensity of its traditional oil and gas operations, in addition to complying with the greenhouse gas-related laws and regulations to which it is subject. Refer to Item 1A. Risk Factors o"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "0000093410-22-000019_c000097",
+          "ticker": "CVX",
+          "year": 2022,
+          "filing_date": "2022-02-24",
+          "section": "",
+          "distance": 0.6347209215164185,
+          "text_preview": "ment capital allocation strategies, including future stock repurchase programs and dividend payments; the effects of changed accounting rules under generally accepted accounting principles promulgated by rule-setting bodies; the company’s ability to "
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0000093410-22-000019_c000181",
+          "ticker": "CVX",
+          "year": 2022,
+          "filing_date": "2022-02-24",
+          "section": "",
+          "distance": 0.6730996370315552,
+          "text_preview": " in the event of a significant incident or series of incidents causing catastrophic loss. As a result, the company is, to a substantial extent, self-insured for such events. The company relies on existing liquidity, financial resources and borrowing "
+        }
+      ]
+    },
+    {
+      "id": "q024",
+      "question": "What were the main risk factors reported by Chevron in 2023?",
+      "ticker": "CVX",
+      "year": 2023,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "market_risk",
+        "regulatory_risk",
+        "operational_risk"
+      ],
+      "expected_labels_normalized": [
+        "market_risk",
+        "operational_risk",
+        "regulatory_risk"
+      ],
+      "predicted_labels_raw": [
+        "Market/Macro",
+        "Operational",
+        "Regulatory/Legal"
+      ],
+      "predicted_labels_normalized": [
+        "market/macro",
+        "operational_risk",
+        "regulatory/legal"
+      ],
+      "precision": 0.33,
+      "recall": 0.33,
+      "f1": 0.33,
+      "overlap_hit": 1,
+      "strict_correct": 0,
+      "num_retrieved": 5,
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": "0000093410-23-000009_c000172",
+          "ticker": "CVX",
+          "year": 2023,
+          "filing_date": "2023-02-23",
+          "section": "",
+          "distance": 0.528016984462738,
+          "text_preview": "jective to further develop the industry’s capability to contain and shut in subsea well control incidents in different regions of the world.\nThe company aims to lower the carbon intensity of its traditional oil and gas operations and comply with the "
+        },
+        {
+          "rank": 2,
+          "chunk_id": "0000093410-23-000009_c000173",
+          "ticker": "CVX",
+          "year": 2023,
+          "filing_date": "2023-02-23",
+          "section": "",
+          "distance": 0.5368865728378296,
+          "text_preview": "encies and Commitments\nfor a discussion of environmental remediation provisions and year-end reserves.\nItem 1A. Risk Factors\nAs a global energy company, Chevron is subject to a variety of risks that could materially impact the company’s results of op"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0000093410-23-000009_c000188",
+          "ticker": "CVX",
+          "year": 2023,
+          "filing_date": "2023-02-23",
+          "section": "",
+          "distance": 0.6557903289794922,
+          "text_preview": "relations with other governments or third parties. In other countries, political conditions have existed that may threaten the safety of employees and the company’s continued presence in those countries, and internal unrest, acts of violence or strai"
+        }
+      ]
+    },
+    {
+      "id": "q027",
+      "question": "What were the main risk factors reported by Johnson & Johnson in 2022?",
+      "ticker": "JNJ",
+      "year": 2022,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "regulatory_risk",
+        "operational_risk",
+        "competitive_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "operational_risk",
+        "regulatory_risk"
+      ],
+      "predicted_labels_raw": [
+        "Strategy"
+      ],
+      "predicted_labels_normalized": [
+        "strategy"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "overlap_hit": 0,
+      "strict_correct": 0,
+      "num_retrieved": 1,
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": "0000200406-22-000022_c000116",
+          "ticker": "JNJ",
+          "year": 2022,
+          "filing_date": "2022-02-17",
+          "section": "",
+          "distance": 0.7784637808799744,
+          "text_preview": " described in Item 1A of this Annual Report on Form 10-K for a description of certain risks that could, among other things, cause the Company’s actual results to differ materially from those expressed in its forward-looking statements. Investors shou"
+        }
+      ]
+    },
+    {
+      "id": "q030",
+      "question": "What were the main risk factors reported by Johnson & Johnson in 2023?",
+      "ticker": "JNJ",
+      "year": 2023,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "regulatory_risk",
+        "operational_risk",
+        "competitive_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "operational_risk",
+        "regulatory_risk"
+      ],
+      "predicted_labels_raw": [
+        "Regulatory/Legal",
+        "Regulatory/Legal"
+      ],
+      "predicted_labels_normalized": [
+        "regulatory/legal"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "overlap_hit": 0,
+      "strict_correct": 0,
+      "num_retrieved": 2,
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": "0000200406-23-000016_c000113",
+          "ticker": "JNJ",
+          "year": 2023,
+          "filing_date": "2023-02-16",
+          "section": "",
+          "distance": 0.8895167112350464,
+          "text_preview": "hat are complex and subject to increasing regulatory requirements that may adversely affect supply, sourcing and pricing of materials used in the Company’s products; and\n•\nThe potential that the expected benefits and opportunities related to restruct"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "0000200406-23-000016_c000235",
+          "ticker": "JNJ",
+          "year": 2023,
+          "filing_date": "2023-02-16",
+          "section": "",
+          "distance": 0.9155811071395874,
+          "text_preview": "and losses related to the sale and write-down of certain investments in equity securities held by Johnson & Johnson Innovation - JJDC, Inc. (JJDC), changes in the fair value of securities, investment (income)/loss related to employee benefit programs"
+        }
+      ]
+    },
+    {
+      "id": "q033",
+      "question": "What were the main risk factors reported by Meta in 2022?",
+      "ticker": "META",
+      "year": 2022,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "regulatory_risk",
+        "competitive_risk",
+        "cybersecurity_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "cybersecurity_risk",
+        "regulatory_risk"
+      ],
+      "predicted_labels_raw": [],
+      "predicted_labels_normalized": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "overlap_hit": 0,
+      "strict_correct": 0,
+      "num_retrieved": 0,
+      "top_results": []
+    },
+    {
+      "id": "q036",
+      "question": "What were the main risk factors reported by Meta in 2023?",
+      "ticker": "META",
+      "year": 2023,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "regulatory_risk",
+        "competitive_risk",
+        "cybersecurity_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "cybersecurity_risk",
+        "regulatory_risk"
+      ],
+      "predicted_labels_raw": [],
+      "predicted_labels_normalized": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "overlap_hit": 0,
+      "strict_correct": 0,
+      "num_retrieved": 0,
+      "top_results": []
+    },
+    {
+      "id": "q039",
+      "question": "What were the main risk factors reported by Netflix in 2022?",
+      "ticker": "NFLX",
+      "year": 2022,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "competitive_risk",
+        "market_risk",
+        "operational_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "market_risk",
+        "operational_risk"
+      ],
+      "predicted_labels_raw": [],
+      "predicted_labels_normalized": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "overlap_hit": 0,
+      "strict_correct": 0,
+      "num_retrieved": 0,
+      "top_results": []
+    },
+    {
+      "id": "q042",
+      "question": "What were the main risk factors reported by Netflix in 2023?",
+      "ticker": "NFLX",
+      "year": 2023,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "competitive_risk",
+        "market_risk",
+        "operational_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "market_risk",
+        "operational_risk"
+      ],
+      "predicted_labels_raw": [],
+      "predicted_labels_normalized": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "overlap_hit": 0,
+      "strict_correct": 0,
+      "num_retrieved": 0,
+      "top_results": []
+    },
+    {
+      "id": "q045",
+      "question": "What were the main risk factors reported by NVIDIA in 2022?",
+      "ticker": "NVDA",
+      "year": 2022,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "supply_chain_risk",
+        "competitive_risk",
+        "market_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "market_risk",
+        "supply_chain_risk"
+      ],
+      "predicted_labels_raw": [
+        "Market/Macro",
+        "Strategy",
+        "Cyber/Technology"
+      ],
+      "predicted_labels_normalized": [
+        "cyber/technology",
+        "market/macro",
+        "strategy"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "overlap_hit": 0,
+      "strict_correct": 0,
+      "num_retrieved": 4,
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": "0001045810-22-000036_c000081",
+          "ticker": "NVDA",
+          "year": 2022,
+          "filing_date": "2022-03-18",
+          "section": "",
+          "distance": 0.6543740034103394,
+          "text_preview": "n on it or connected to it are not a part of this Annual Report on Form 10-K.\nITEM 1A. RISK FACTORS\nIn evaluating NVIDIA, the following risk factors should be considered in addition to the other information in this Annual Report on Form 10-K. Purchas"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "0001045810-22-000036_c000067",
+          "ticker": "NVDA",
+          "year": 2022,
+          "filing_date": "2022-03-18",
+          "section": "",
+          "distance": 0.9047410488128662,
+          "text_preview": "alysis to ensure that our ESG priorities remain aligned with stakeholder expectations, market trends, and business risks and opportunities. These issues are important for our continued business success and reflect the topics of highest concern to NVI"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0001045810-22-000036_c000159",
+          "ticker": "NVDA",
+          "year": 2022,
+          "filing_date": "2022-03-18",
+          "section": "",
+          "distance": 0.9288803339004517,
+          "text_preview": "$\n174.97\n$\n215.72\nNasdaq 100\n$\n100.00\n$\n136.00\n$\n136.62\n$\n179.79\n$\n260.70\n$\n303.21\nITEM 6. (RESERVED)\n29\nTable of Contents\nITEM 7. MANAGEMENT’S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS\nThe following discussion and anal"
+        }
+      ]
+    },
+    {
+      "id": "q048",
+      "question": "What were the main risk factors reported by NVIDIA in 2023?",
+      "ticker": "NVDA",
+      "year": 2023,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "supply_chain_risk",
+        "competitive_risk",
+        "market_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "market_risk",
+        "supply_chain_risk"
+      ],
+      "predicted_labels_raw": [
+        "Regulatory/Legal",
+        "Operational",
+        "Operational"
+      ],
+      "predicted_labels_normalized": [
+        "operational_risk",
+        "regulatory/legal"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "overlap_hit": 0,
+      "strict_correct": 0,
+      "num_retrieved": 5,
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": "0001045810-23-000017_c000083",
+          "ticker": "NVDA",
+          "year": 2023,
+          "filing_date": "2023-02-24",
+          "section": "",
+          "distance": 0.6907947063446045,
+          "text_preview": "as reasonably practicable after we electronically file such material with, or furnish it to, the Securities and Exchange Commission, or the SEC. The SEC’s website,\nhttp://www.sec.gov\n, contains reports, proxy and information statements, and other inf"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "0001045810-23-000017_c000029",
+          "ticker": "NVDA",
+          "year": 2023,
+          "filing_date": "2023-02-24",
+          "section": "",
+          "distance": 0.7882092595100403,
+          "text_preview": "what we expect. We hereby qualify our forward-looking statements by these cautionary statements. Except as required by law, we assume no obligation to update these forward-looking statements publicly, or to update the reasons actual results could dif"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0001045810-23-000017_c000069",
+          "ticker": "NVDA",
+          "year": 2023,
+          "filing_date": "2023-02-24",
+          "section": "",
+          "distance": 0.8744179010391235,
+          "text_preview": "ess and reflect the topics of highest concern to NVIDIA and our stakeholders.\nThe following section and the Human Capital Management Section below provide an overview of our principles and practices. More information can be found on the Corporate Res"
+        }
+      ]
+    },
+    {
+      "id": "q051",
+      "question": "What were the main risk factors reported by Oracle in 2022?",
+      "ticker": "ORCL",
+      "year": 2022,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "competitive_risk",
+        "cybersecurity_risk",
+        "operational_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "cybersecurity_risk",
+        "operational_risk"
+      ],
+      "predicted_labels_raw": [
+        "Market/Macro",
+        "Operational",
+        "Regulatory/Legal"
+      ],
+      "predicted_labels_normalized": [
+        "market/macro",
+        "operational_risk",
+        "regulatory/legal"
+      ],
+      "precision": 0.33,
+      "recall": 0.33,
+      "f1": 0.33,
+      "overlap_hit": 1,
+      "strict_correct": 0,
+      "num_retrieved": 5,
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": "0001564590-22-023675_c000057",
+          "ticker": "ORCL",
+          "year": 2022,
+          "filing_date": "2022-06-21",
+          "section": "",
+          "distance": 0.5474179983139038,
+          "text_preview": " a Delaware corporation and is the successor to operations originally begun in June 1977.\nRecent Global Events\nOracle withdrew its operations from the Russian Federation and the Republic of Belarus in March 2022.\nNeither of the aforementioned countri"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "0001564590-22-023675_c000303",
+          "ticker": "ORCL",
+          "year": 2022,
+          "filing_date": "2022-06-21",
+          "section": "",
+          "distance": 0.8328061103820801,
+          "text_preview": " could have a material effect on the financial statements.\nBecause of its inherent limitations, internal control over financial reporting may not prevent or detect misstatements. Also, projections of any evaluation of effectiveness to future periods "
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0001564590-22-023675_c000225",
+          "ticker": "ORCL",
+          "year": 2022,
+          "filing_date": "2022-06-21",
+          "section": "",
+          "distance": 0.8471158146858215,
+          "text_preview": "aims and\n42\nTable of Contents\nIndex to Financial Statements\nlitigation and may revise our estimates. Such revisions in the estimates of the potential liabilities could have a material impact on our results of ope\nrations and financial position.\nResul"
+        }
+      ]
+    },
+    {
+      "id": "q054",
+      "question": "What were the main risk factors reported by Oracle in 2023?",
+      "ticker": "ORCL",
+      "year": 2023,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "competitive_risk",
+        "cybersecurity_risk",
+        "operational_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "cybersecurity_risk",
+        "operational_risk"
+      ],
+      "predicted_labels_raw": [
+        "Competition",
+        "Cyber/Technology",
+        "Regulatory/Legal"
+      ],
+      "predicted_labels_normalized": [
+        "competitive_risk",
+        "cyber/technology",
+        "regulatory/legal"
+      ],
+      "precision": 0.33,
+      "recall": 0.33,
+      "f1": 0.33,
+      "overlap_hit": 1,
+      "strict_correct": 0,
+      "num_retrieved": 3,
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": "0000950170-23-028914_c000112",
+          "ticker": "ORCL",
+          "year": 2023,
+          "filing_date": "2023-06-20",
+          "section": "",
+          "distance": 0.7746352553367615,
+          "text_preview": "maintenance of our products and services offerings;\n•\ncompatibility between Oracle products and services deployed within local IT environments and public cloud IT environments, including our Oracle Cloud environments;\n•\nthe adoption of commodity serv"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "0000950170-23-028914_c000151",
+          "ticker": "ORCL",
+          "year": 2023,
+          "filing_date": "2023-06-20",
+          "section": "",
+          "distance": 0.7941745519638062,
+          "text_preview": "with these changes as new threats emerge. We may not discover any security breach and loss of information for a significant period of time after the security breach.\nOur products operate in conjunction with and are dependent on a wide variety of thir"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "0000950170-23-028914_c000117",
+          "ticker": "ORCL",
+          "year": 2023,
+          "filing_date": "2023-06-20",
+          "section": "",
+          "distance": 0.7956709861755371,
+          "text_preview": "n from August 2020 until June 2022, and as Chief Legal Officer of HSBC Holdings, plc from January 2012 to August 2020.\nMs. Smith, 57, has been our Executive Vice President, Chief Accounting Officer since December 2022. She served as our Senior Vice P"
+        }
+      ]
+    },
+    {
+      "id": "q057",
+      "question": "What were the main risk factors reported by Walmart in 2022?",
+      "ticker": "WMT",
+      "year": 2022,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "operational_risk",
+        "supply_chain_risk",
+        "competitive_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "operational_risk",
+        "supply_chain_risk"
+      ],
+      "predicted_labels_raw": [],
+      "predicted_labels_normalized": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "overlap_hit": 0,
+      "strict_correct": 0,
+      "num_retrieved": 0,
+      "top_results": []
+    },
+    {
+      "id": "q060",
+      "question": "What were the main risk factors reported by Walmart in 2023?",
+      "ticker": "WMT",
+      "year": 2023,
+      "task": "qa_risk",
+      "expected_labels_raw": [
+        "operational_risk",
+        "supply_chain_risk",
+        "competitive_risk"
+      ],
+      "expected_labels_normalized": [
+        "competitive_risk",
+        "operational_risk",
+        "supply_chain_risk"
+      ],
+      "predicted_labels_raw": [],
+      "predicted_labels_normalized": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "overlap_hit": 0,
+      "strict_correct": 0,
+      "num_retrieved": 0,
+      "top_results": []
+    }
+  ]
+}

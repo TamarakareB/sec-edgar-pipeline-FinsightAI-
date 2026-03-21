@@ -8,7 +8,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 sys.path.insert(0, str(Path(__file__).parent / "rag"))
-from retrieve import search
+from src.rag.retrieve import search
 
 DB_PATH = Path("data/sql/finsightai.db")
 

@@ -35,3 +35,4 @@ with open(OUTPUT_DIR / "metadata.pkl", "wb") as f:
     pickle.dump(metadata, f)
 
 print("Embeddings saved to data/index/")
+# Verify the contents of the dataset

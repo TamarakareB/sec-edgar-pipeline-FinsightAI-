@@ -224,3 +224,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+###output: data/ 
+###         edgar_meta.json
+###         edgar_docs.jsonl
+###         edgar_chunks.jsonl

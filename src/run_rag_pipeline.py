@@ -4,16 +4,29 @@ import sys
 from pathlib import Path
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent
-RAG_DIR = PROJECT_ROOT / "rag"
+# Root
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+# src
+SRC_DIR = PROJECT_ROOT / "src"
+
+# rag
+RAG_DIR = SRC_DIR / "rag"
+
+# data
 DATA_DIR = PROJECT_ROOT / "data"
 INDEX_DIR = DATA_DIR / "index"
 DATASET_DIR = DATA_DIR / "dataset"
 
+# dataset
 DATASET_PATH = DATASET_DIR / "edgar_chunks.jsonl"
 EMBEDDINGS_PATH = INDEX_DIR / "embeddings.npy"
 METADATA_PATH = INDEX_DIR / "metadata.pkl"
 FAISS_INDEX_PATH = INDEX_DIR / "faiss_index.bin"
+
+print("PROJECT_ROOT =", PROJECT_ROOT)
+print("RAG_DIR =", RAG_DIR)
+print("DATASET_PATH =", DATASET_PATH)
 
 STEP_SCRIPTS = {
     "embed": RAG_DIR / "embed_chunks.py",
@@ -117,7 +130,7 @@ def run_build_pipeline(from_step: str = "embed"):
 
 def main():
     parser = argparse.ArgumentParser(description="Run the RAG pipeline")
-    subparsers = parser.add_subparsers(dest="command", required=True)
+    subparsers = parser.add_subparsers(dest="command")
 
     parser_all = subparsers.add_parser("all", help="Run embed + index")
     parser_all.add_argument(
@@ -151,9 +164,13 @@ def main():
             ticker=args.ticker,
             year=args.year,
         )
+    elif args.command is None:
+        parser.print_help()
+        sys.exit(1)
     else:
         raise ValueError(f"Unknown command: {args.command}")
 
 
 if __name__ == "__main__":
     main()
+    
