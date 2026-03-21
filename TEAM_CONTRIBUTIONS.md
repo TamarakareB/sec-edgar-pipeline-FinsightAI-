@@ -22,6 +22,7 @@ Each team member was responsible for a key component of the pipeline, covering d
   - fiscal year
   - section labels (e.g., Risk Factors, MD&A)
 - Delivered a clean and structured dataset to the team
+- Contributed to the team Pulse article by summarizing the data collection process and key insights
 
 **Deliverables**
 - Clean dataset (JSONL / Parquet)

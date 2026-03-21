@@ -1,5 +1,13 @@
 # FinSightAI: SEC EDGAR NLP Pipeline (BANA 275)
 
+## 🔗 Project Article (LinkedIn)
+
+We published a detailed article about this project:
+
+👉 [Read the full article on LinkedIn](https://www.linkedin.com/posts/tamarakare-edwin-biayeibo-ba9b65254_nlp-fintech-rag-activity-7440970878605234177-2j3D)
+
+---
+
 This project builds an end-to-end AI-powered pipeline to automatically extract, analyze, and query financial insights from SEC EDGAR filings (e.g., 10-K, 10-Q).
 
 It downloads filings, converts them into clean text, extracts structured financial data, and supports downstream NLP tasks such as:
